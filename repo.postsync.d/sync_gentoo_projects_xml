@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 repository_name="${1}"
 repository_path="${3}"
@@ -7,6 +7,6 @@ repository_path="${3}"
 
 source /lib/gentoo/functions.sh
 
-ebegin "Updating projects.xml"
-wget -q -P "${repository_path}"/metadata/ -N https://api.gentoo.org/metastructure/projects.xml
+ebegin "Updating projects.xml @ ${repository_path}/metadata/"
+wget --quiet --directory-prefix="${repository_path}"/metadata/ --timestamping https://api.gentoo.org/metastructure/projects.xml
 eend $?
