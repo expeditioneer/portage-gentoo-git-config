@@ -32,6 +32,18 @@ fetch or regenerate them after every `emerge --sync`.
 * `net-misc/rsync` — md5-cache and dtd/glsa/news fallback
 * `net-misc/wget` — `projects.xml`
 
+## Installation
+
+Copy the files into `/etc/portage`:
+
+```bash
+install -m 0644 repos.conf/gentoo.conf       /etc/portage/repos.conf/gentoo.conf
+install -m 0755 repo.postsync.d/sync_gentoo_* /etc/portage/repo.postsync.d/
+install -m 0644 repo.postsync.d/sync_overlay_cache /etc/portage/repo.postsync.d/
+```
+
+The next `emerge --sync` will use the git mirror and run all hooks.
+
 ## Optional: overlay cache regeneration
 
 To also regenerate the metadata cache of any **other** (non-`gentoo`) repository
