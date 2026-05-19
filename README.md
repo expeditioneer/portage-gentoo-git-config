@@ -1,3 +1,10 @@
+> **⚠️ Archived — no longer maintained.**
+> I no longer use Gentoo, so this repository is archived and will not receive
+> further updates. The configuration is left here for reference and may become
+> outdated as Portage evolves. Use at your own risk.
+
+---
+
 # portage-gentoo-git-config
 
 Minimal Portage configuration that syncs the Gentoo ebuild repository via the
